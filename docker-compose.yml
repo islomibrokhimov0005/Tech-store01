@@ -1,0 +1,12 @@
+services:
+  tech-store:
+    build: .
+    container_name: tech-store-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - techstore_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  techstore_data:
